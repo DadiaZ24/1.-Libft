@@ -1,4 +1,4 @@
-# 1. 42-Porto-Common Core-Libft
+# 42-Porto-Common Core-Libft
 ## My first library, libft.
 
 ### String & Char Functions:
