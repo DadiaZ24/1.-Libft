@@ -1,6 +1,4 @@
-<p align="center">
-
-# 42-Porto-Common Core-Libft
+<p align="center"> # 42-Porto-Common Core-Libft</p>
 ## My first library, libft.
 
 ### String & Char Functions:
