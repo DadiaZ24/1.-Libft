@@ -6,25 +6,25 @@
 1. ```ft_strchr:``` char	*ft_strchr(char *str, char c);<br /><br />
          **Desctiption:** Finds the first occurrence of c in the string pointed by *str.<br />
          **Return Value:** Pointer to the beggining of the occurrence of c in the string pointed by *str<br />
-2. ```ft_strdup```: ```char	*ft_strdup(char *s)```;<br />
+2. ```ft_strdup```: char	*ft_strdup(char *s);<br /><br />
          **Desctiption:** Duplicates the string pointed by *s.<br />
          **Return Value:** Returns the duplicated string.<br />
-3. ```ft_striteri```: void	ft_striteri(char *s, void (*f)(unsigned int, char*));<br />
+3. ```ft_striteri```: void	ft_striteri(char *s, void (*f)(unsigned int, char*));<br /><br />
          **Desctiption:** Applies the function ’f’ on each character of the string passed as argument, passing its index as first argument.<br />
          **Return Value:** None.<br />
-4. ```ft_strjoin```: char	*ft_strjoin(char const *s1, char const *s2);<br />
+4. ```ft_strjoin```: char	*ft_strjoin(char const *s1, char const *s2);<br /><br />
          **Desctiption:** Allocates and returns a new string, which is the result of the concatenation of ’s1’ and ’s2’.<br />
          **Return Value:** The new string.<br />
-5. ```ft_strlcat```: int	ft_strlcat(char *dst, char *src, int n);<br />
+5. ```ft_strlcat```: int	ft_strlcat(char *dst, char *src, int n);<br /><br />
          **Desctiption:** Concatenate the string pointed by *src into the string pointed by *dst, while n size.
          **Return Value:** size of dst + src.<br />
-6. ```ft_strlcpy```: int	ft_strlcpy(char *dst, char *src, int n);<br />
+6. ```ft_strlcpy```: int	ft_strlcpy(char *dst, char *src, int n);<br /><br />
          **Desctiption:** Copy the string pointed by *src into the string pointed by *dst, while n size.<br />
          **Return Value:** size of the src string.<br />
-7. ```ft_strlen```: int	ft_strlen(char const *str);<br />
+7. ```ft_strlen```: int	ft_strlen(char const *str);<br /><br />
          **Desctiption:** Calculates the size of a string.<br />
          **Return Value:** Size of the string.<br />
-8. ```ft_strmapi```: char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));<br />
+8. ```ft_strmapi```: char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));<br /><br />
          **Desctiption:** Applies the function ’f’ to each character of the string ’s’, and passing its index as first argument to create a new string (with malloc(3)) resulting from successive applications of ’f’.<br />
          **Return Value:** The string created from the successive applications of ’f’.<br />
 9. ```ft_strncmp```: int	ft_strncmp(char const *s1, char const *s2, size_t n);<br />
