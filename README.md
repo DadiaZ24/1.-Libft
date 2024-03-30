@@ -3,8 +3,8 @@
 
 ### String & Char Functions:
 
-1. ```ft_strchr```: char	*ft_strchr(char *str, char c);
-         **Desctiption:** Finds the first occurrence of c in the string pointed by *str.
+1. ```ft_strchr```: char	*ft_strchr(char *str, char c);\n
+         **Desctiption:** Finds the first occurrence of c in the string pointed by *str.\n
          **Return Value:** Pointer to the beggining of the occurrence of c in the string pointed by *str
 2. ```ft_strdup```: char	*ft_strdup(char *s);
          **Desctiption:** Duplicates the string pointed by *s.
