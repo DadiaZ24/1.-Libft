@@ -1,8 +1,8 @@
 # 1. 42-Porto-Common Core-Libft
 ## My first library, libft.
-<br />
+
 ### String & Char Functions:
-<br />
+
 1. ```ft_strchr```: char	*ft_strchr(char *str, char c);<br />
          **Desctiption:** Finds the first occurrence of c in the string pointed by *str.<br />
          **Return Value:** Pointer to the beggining of the occurrence of c in the string pointed by *str<br />
