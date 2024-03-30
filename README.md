@@ -5,13 +5,13 @@
 
 1. ```ft_strchr:``` char	*ft_strchr(char *str, char c);<br /><br />
          **Desctiption:** Finds the first occurrence of c in the string pointed by *str.<br />
-         **Return Value:** Pointer to the beggining of the occurrence of c in the string pointed by *str<br />
+         **Return Value:** Pointer to the beggining of the occurrence of c in the string pointed by *str<br /><br />
 2. ```ft_strdup```: char	*ft_strdup(char *s);<br /><br />
          **Desctiption:** Duplicates the string pointed by *s.<br />
-         **Return Value:** Returns the duplicated string.<br />
+         **Return Value:** Returns the duplicated string.<br /><br />
 3. ```ft_striteri```: void	ft_striteri(char *s, void (*f)(unsigned int, char*));<br /><br />
          **Desctiption:** Applies the function ’f’ on each character of the string passed as argument, passing its index as first argument.<br />
-         **Return Value:** None.<br />
+         **Return Value:** None.<br /><br />
 4. ```ft_strjoin```: char	*ft_strjoin(char const *s1, char const *s2);<br /><br />
          **Desctiption:** Allocates and returns a new string, which is the result of the concatenation of ’s1’ and ’s2’.<br />
          **Return Value:** The new string.<br />
