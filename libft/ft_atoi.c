@@ -5,14 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ddias-fe <ddias-fe@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/22 16:58:00 by ddias-fe          #+#    #+#             */
-/*   Updated: 2024/01/22 16:58:00 by ddias-fe         ###   ########.fr       */
+/*   Created: 2024/04/09 14:53:32 by ddias-fe          #+#    #+#             */
+/*   Updated: 2024/04/09 14:53:32 by ddias-fe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(char *str)
+int	ft_atoi(const char *str)
 {
 	int	i;
 	int	sign;
@@ -21,7 +21,7 @@ int	ft_atoi(char *str)
 	i = 0;
 	sign = 1;
 	result = 0;
-	while ((str[i] <= 13 && str[i] >= 8) || (str[i] == 32))
+	while ((str[i] <= 13 && str[i] >= 9) || (str[i] == 32))
 		i++;
 	if (str[i] == '-')
 		sign *= -1;

@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ddias-fe <ddias-fe@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/23 17:07:51 by ddias-fe          #+#    #+#             */
-/*   Updated: 2024/01/23 17:07:51 by ddias-fe         ###   ########.fr       */
+/*   Created: 2024/04/11 15:23:56 by ddias-fe          #+#    #+#             */
+/*   Updated: 2024/04/11 15:23:56 by ddias-fe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int	ft_countwords(char const *s, char c)
 	return (count);
 }
 
-int	ft_wordlen(char *s, char c)
+int	wordlen(char const *s, char c)
 {
 	int	i;
 	int	count;
@@ -48,31 +48,56 @@ int	ft_wordlen(char *s, char c)
 	return (count);
 }
 
-char	**ft_split(char *s, char c)
+char	*makeword(char const *s, char c)
+{
+	char	*word;
+	int		i;
+
+	i = 0;
+	word = malloc(sizeof(char) * (wordlen(s, c) + 1));
+	if (!word)
+		return (NULL);
+	while (s[i] != c && s[i])
+	{
+		word[i] = s[i];
+		i++;
+	}
+	word[i] = '\0';
+	return (word);
+}
+
+char	**free_data(char **split, int i)
+{
+	while (i--)
+		free(split[i]);
+	free(split);
+	return (NULL);
+}
+
+char	**ft_split(char const *s, char c)
 {
 	char	**newstring;
 	int		i;
 	int		j;
-	int		k;
 	int		count_words;
 
+	if (!s)
+		return (NULL);
 	i = -1;
 	j = 0;
 	count_words = ft_countwords(s, c);
-	newstring = (char **)malloc(sizeof(char *) * (count_words + 1));
+	newstring = malloc(sizeof(char *) * (count_words + 1));
 	if (!newstring)
-		return (0);
+		return (NULL);
 	while (++i < count_words)
 	{
-		k = 0;
 		while (s[j] == c)
 			j++;
-		newstring[i] = (char *)malloc(sizeof(char)
-				* (ft_wordlen(&s[j], c) + 1));
-		while (s[j] != c && s[j])
-			newstring[i][k++] = s[j++];
-		newstring[i][k] = '\0';
+		newstring[i] = makeword(s + j, c);
+		if (!newstring[i])
+			return (free_data(newstring, i));
+		j += wordlen(s + j, c);
 	}
-	newstring[i] = '\0';
+	newstring[i] = NULL;
 	return (newstring);
 }

@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ddias-fe <ddias-fe@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/23 18:28:51 by ddias-fe          #+#    #+#             */
-/*   Updated: 2024/01/23 18:28:51 by ddias-fe         ###   ########.fr       */
+/*   Created: 2024/04/09 14:57:11 by ddias-fe          #+#    #+#             */
+/*   Updated: 2024/04/09 14:57:11 by ddias-fe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_putstr_fd(char *s, int fd)
 {
 	int	i;
 
+	if (!s)
+		return ;
 	i = 0;
 	while (s[i])
 	{

@@ -5,38 +5,37 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ddias-fe <ddias-fe@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/18 17:22:03 by ddias-fe          #+#    #+#             */
-/*   Updated: 2024/01/18 17:22:03 by ddias-fe         ###   ########.fr       */
+/*   Created: 2024/04/09 14:58:26 by ddias-fe          #+#    #+#             */
+/*   Updated: 2024/04/09 14:58:26 by ddias-fe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(char *origin, char *find, int n)
+char	*ft_strnstr(char *origin, char *find, size_t n)
 {
-	int	i;
-	int	j;
-	int	k;
+	size_t	i;
+	size_t	j;
 
 	i = 0;
-	j = 0;
+	if (!n && !origin)
+		return (NULL);
+	if (!origin[i] && !find[i])
+		return (origin);
 	if (!find[i])
 		return (origin);
-	while ((origin[i]) && (origin[i] != find[0]) && (i < n))
-		i++;
-	if (i >= n)
-		return (0);
-	k = i;
-	while (find[j])
+	while ((origin[i]))
 	{
-		if (k > n)
-			return (0);
-		if (origin[k] == find[j++])
+		j = 0;
+		while (origin[i + j] == find[j] && (i + j) < n)
 		{
-			k++;
+			if (find[j] == '\0' && origin[i + j] == '\0')
+				return (origin + i);
+			j++;
 		}
-		else
-			return (0);
+		if (find[j] == '\0')
+			return (origin + i);
+		i++;
 	}
-	return (origin + i);
+	return (0);
 }

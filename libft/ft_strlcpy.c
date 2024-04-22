@@ -5,17 +5,17 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ddias-fe <ddias-fe@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/18 16:34:32 by ddias-fe          #+#    #+#             */
-/*   Updated: 2024/01/18 16:34:32 by ddias-fe         ###   ########.fr       */
+/*   Created: 2024/04/09 14:57:40 by ddias-fe          #+#    #+#             */
+/*   Updated: 2024/04/09 14:57:40 by ddias-fe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlcpy(char *dst, char *src, int n)
+int	ft_strlcpy(char *dst, char *src, size_t n)
 {
-	int	i;
-	int	size;
+	size_t	i;
+	size_t	size;
 
 	size = ft_strlen(src);
 	i = 0;

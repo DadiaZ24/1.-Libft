@@ -5,29 +5,21 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ddias-fe <ddias-fe@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/14 00:36:58 by ddias-fe          #+#    #+#             */
-/*   Updated: 2024/01/14 00:36:58 by ddias-fe         ###   ########.fr       */
+/*   Created: 2024/04/09 14:57:20 by ddias-fe          #+#    #+#             */
+/*   Updated: 2024/04/09 14:57:20 by ddias-fe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(char *str, char c)
+char	*ft_strchr(char *str, int c)
 {
 	int	i;
-	int	size;
 
 	i = 0;
-	size = ft_strlen(str);
-	while (str[i])
-	{
-		if (str[i] == c)
-			break ;
+	while (str[i] && str[i] != (char)c)
 		i++;
-	}
-	if (c == '\0')
+	if (str[i] == (char)c)
 		return (str + i);
-	if (size <= i)
-		return (0);
-	return (str + i);
+	return (NULL);
 }

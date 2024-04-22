@@ -5,8 +5,8 @@
 #                                                     +:+ +:+         +:+      #
 #    By: ddias-fe <ddias-fe@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/01/23 21:05:41 by ddias-fe          #+#    #+#              #
-#    Updated: 2024/01/23 21:05:41 by ddias-fe         ###   ########.fr        #
+#    Created: 2024/04/09 14:59:38 by ddias-fe          #+#    #+#              #
+#    Updated: 2024/04/09 14:59:38 by ddias-fe         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,19 +20,16 @@ LIB_SRCS = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c ft_s
 	  	   ft_memcmp.c ft_strnstr.c ft_atoi.c ft_calloc.c ft_strdup.c ft_substr.c ft_strjoin.c ft_strtrim.c ft_split.c\
 	  	   ft_itoa.c ft_strmapi.c ft_striteri.c ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
 LIB_OBJS =  $(LIB_SRCS:.c=.o)
-LIB_BONUS = ft_lstadd_back.c ft_lstadd_front.c ft_lstclear.c ft_lstdelone.c ft_lstlast.c ft_lstnew.c ft_lstsize.c ft_lstiter.c ft_lstmap.c
-LIB_BOBJS = $(LIB_BONUS:.c=.o)
 
 all: $(NAME)
 
 $(NAME): $(LIB_OBJS)
 	ar rc $(NAME) $(LIB_OBJS)
 
-bonus: $(LIB_OBJS) $(LIB_BOBJS)
-	ar rc $(NAME) $(LIB_OBJS) $(LIB_BOBJS)
-
 clean:
-	$(RM) $(LIB_OBJS) $(BONUS_OBJS) 
+	$(RM) $(LIB_OBJS)
 fclean: clean
 	$(RM) $(NAME)
-re: fclean all
+re: clean all
+
+PHONY: all clean fclean re

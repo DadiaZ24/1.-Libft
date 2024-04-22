@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ddias-fe <ddias-fe@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/23 16:40:45 by ddias-fe          #+#    #+#             */
-/*   Updated: 2024/01/23 16:40:45 by ddias-fe         ###   ########.fr       */
+/*   Created: 2024/04/09 14:58:35 by ddias-fe          #+#    #+#             */
+/*   Updated: 2024/04/09 14:58:35 by ddias-fe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int		size;
 	char	*newstring;
 
+	if (!s1)
+		return (NULL);
 	size = ft_strlen(s1);
 	i = 0;
 	s = 0;

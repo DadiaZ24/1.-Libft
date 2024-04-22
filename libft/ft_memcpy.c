@@ -5,16 +5,16 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ddias-fe <ddias-fe@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/17 16:56:32 by ddias-fe          #+#    #+#             */
-/*   Updated: 2024/01/17 16:56:32 by ddias-fe         ###   ########.fr       */
+/*   Created: 2024/04/09 14:56:47 by ddias-fe          #+#    #+#             */
+/*   Updated: 2024/04/09 14:56:47 by ddias-fe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dst, const void *src, int n)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	int		i;
+	size_t	i;
 	char	*d;
 	char	*s;
 

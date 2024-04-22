@@ -5,16 +5,16 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ddias-fe <ddias-fe@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/22 16:40:45 by ddias-fe          #+#    #+#             */
-/*   Updated: 2024/01/22 16:40:45 by ddias-fe         ###   ########.fr       */
+/*   Created: 2024/04/09 14:55:39 by ddias-fe          #+#    #+#             */
+/*   Updated: 2024/04/09 14:55:39 by ddias-fe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_memcmp(void *s1, void *s2, int n)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	int		i;
+	size_t	i;
 	char	*str1;
 	char	*str2;
 

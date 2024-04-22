@@ -5,12 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ddias-fe <ddias-fe@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/14 01:13:49 by ddias-fe          #+#    #+#             */
-/*   Updated: 2024/01/14 01:13:49 by ddias-fe         ###   ########.fr       */
+/*   Created: 2024/04/09 14:56:55 by ddias-fe          #+#    #+#             */
+/*   Updated: 2024/04/09 14:56:55 by ddias-fe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+//#include "libft.h"
+#include <string.h>
+#include <stdio.h>
 
 void	*ft_memset(void *str, int c, size_t n)
 {

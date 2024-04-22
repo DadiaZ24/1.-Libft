@@ -5,18 +5,18 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ddias-fe <ddias-fe@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/18 16:54:54 by ddias-fe          #+#    #+#             */
-/*   Updated: 2024/01/18 16:54:54 by ddias-fe         ###   ########.fr       */
+/*   Created: 2024/04/09 14:57:36 by ddias-fe          #+#    #+#             */
+/*   Updated: 2024/04/09 14:57:36 by ddias-fe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlcat(char *dst, char *src, int n)
+size_t	ft_strlcat(char *dst, char *src, size_t n)
 {
-	int	i;
-	int	sized;
-	int	sizes;
+	size_t	i;
+	size_t	sized;
+	size_t	sizes;
 
 	sized = ft_strlen(dst);
 	if (!dst)

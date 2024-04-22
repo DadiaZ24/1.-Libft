@@ -5,16 +5,16 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ddias-fe <ddias-fe@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/13 18:07:16 by ddias-fe          #+#    #+#             */
-/*   Updated: 2024/01/13 18:07:16 by ddias-fe         ###   ########.fr       */
+/*   Created: 2024/04/09 14:57:44 by ddias-fe          #+#    #+#             */
+/*   Updated: 2024/04/09 14:57:44 by ddias-fe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlen(char const *str)
+size_t	ft_strlen(char const *str)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (str[i])

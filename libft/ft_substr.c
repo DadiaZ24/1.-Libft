@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ddias-fe <ddias-fe@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/22 19:18:27 by ddias-fe          #+#    #+#             */
-/*   Updated: 2024/01/22 19:18:27 by ddias-fe         ###   ########.fr       */
+/*   Created: 2024/04/09 14:58:48 by ddias-fe          #+#    #+#             */
+/*   Updated: 2024/04/09 14:58:48 by ddias-fe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,12 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char	*newstring;
 	size_t	i;
 
+	if (!s)
+		return (NULL);
+	if (len > ft_strlen(s) - start)
+		len = ft_strlen(s) - start;
+	if (start > ft_strlen(s))
+		return (ft_strdup(""));
 	newstring = (char *)malloc(sizeof(char) * (len + 1));
 	if (!newstring)
 		return (0);

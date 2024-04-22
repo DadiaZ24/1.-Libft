@@ -5,25 +5,28 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ddias-fe <ddias-fe@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/18 17:12:13 by ddias-fe          #+#    #+#             */
-/*   Updated: 2024/01/18 17:12:13 by ddias-fe         ###   ########.fr       */
+/*   Created: 2024/04/09 14:55:36 by ddias-fe          #+#    #+#             */
+/*   Updated: 2024/04/09 14:55:36 by ddias-fe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+//#include "libft.h"
+#include <string.h>
+#include <stdio.h>
 
-void	*ft_memchr(void *str, int c, int n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	int		i;
-	char	*ms;
-	char	mc;
+	size_t			i;
+	unsigned char	*ms;
 
+	ms = (unsigned char *)s;
 	i = 0;
-	ms = (char *)str;
-	mc = (char)c;
-	while ((ms[i]) && (ms[i] != mc) && (i < n - 1))
+	while (n > 0)
+	{
+		if (ms[i] == (unsigned char)c)
+			return (ms + i);
 		i++;
-	if (ms[i] == mc)
-		return (ms + i);
-	return (0);
+		n--;
+	}
+	return (NULL);
 }
