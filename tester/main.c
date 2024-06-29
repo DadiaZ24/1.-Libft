@@ -14,7 +14,10 @@
 
 int main(void)
 {
+    print_header();
     //ATOI TESTER
     ft_atoi_test();
+    ft_bzero_test();
+    printf("\n");
     return (0);
 }
