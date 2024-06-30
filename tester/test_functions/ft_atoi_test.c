@@ -32,6 +32,4 @@ void    ft_atoi_test()
     run_tester(ft_atoi("-2147483649"),  atoi("-2147483649"), "-2147483649", 1);
     run_tester(ft_atoi("abc"),  atoi("abc"), "abc", 1);
     run_tester(ft_atoi("123abc456"),  atoi("123abc456"), "123abc456", 1);
-    printf("\n");
-    //printf("\n%sFT_ATOI PASSED!!%s\n", COLOR_CYAN, COLOR_DEFAULT);
 }

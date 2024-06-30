@@ -16,15 +16,20 @@ RM = rm -rf
 LIBFT = ../libft/libft.a
 NAME = libft_tester
 
-SRCS = main.c tester_utils.c test_functions/ft_atoi_test.c test_functions/ft_bzero_test.c
+SRCS = main.c tester_utils.c test_functions/ft_atoi_test.c test_functions/ft_bzero_test.c \
+	test_functions/ft_calloc_test.c
 OBJS =  $(SRCS:.c=.o)
 
-all: $(NAME)
+all: deps $(NAME)
+
+deps:
+	$(MAKE) -C ../libft
 
 $(NAME): $(LIB_OBJS)
 	$(CC) $(CFLAGS) $(SRCS) -o $(NAME) $(LIBFT)
 
 clean:
+	$(MAKE) fclean -C ../libft
 	$(RM) $(LIB_OBJS)
 fclean: clean
 	$(RM) $(NAME)

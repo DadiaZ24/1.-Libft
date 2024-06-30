@@ -14,7 +14,7 @@
 
 void    ft_bzero_test()
 {
-    printf("%sft_bzero: %s", COLOR_BLUE, COLOR_DEFAULT);
+    printf("\n%sft_bzero: %s", COLOR_BLUE, COLOR_DEFAULT);
 
     // ------------------ BUFFER TESTS --------------------
     char    small[5] = {1, 2, 3, 4, 5};
@@ -77,6 +77,7 @@ void    ft_bzero_test()
     while (++i < sizeof(slarge))
         run_tester(slarge[i], 0, "SUPER LARGE BZERO", 0);
     run_tester(slarge[i - 1], 0, "SUPER LARGE BZERO", 1);
+    free(slarge);
 
     // ------------------ EDGE OF MEMORY BZERO --------------------
     char    edgemem[CHAR_MAX];

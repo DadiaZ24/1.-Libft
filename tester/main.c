@@ -18,6 +18,7 @@ int main(void)
     //ATOI TESTER
     ft_atoi_test();
     ft_bzero_test();
+    ft_calloc_test();
     printf("\n");
     return (0);
 }

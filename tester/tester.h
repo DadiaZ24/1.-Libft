@@ -35,6 +35,7 @@ typedef struct s_tester
 
 void    ft_atoi_test();
 void    ft_bzero_test();
+void    ft_calloc_test();
 void	print_header();
 void	run_tester(int user_result, int expected_result, char *test, int trigger);
 #endif
